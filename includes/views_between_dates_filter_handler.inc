@@ -136,7 +136,7 @@ class views_between_dates_filter_handler extends date_views_filter_handler_simpl
       // If the filter is exposed, display the granularity.
       if ($this->options['exposed']) {
         return t('(@start - @end) <strong>Exposed</strong> @format',
-          array('@start' => $start, '@end' => $end, '@format' => $parts[$handler->granularity]));
+          array('@start' => $start, '@end' => $end, '@format' => $handler->granularity));
       }
       // If not exposed, display the value.
       $value = check_plain(!empty($this->options['default_date']) ? $this->options['default_date'] : $this->options['value']['value']);

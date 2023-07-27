@@ -61,7 +61,7 @@ class views_between_dates_filter_handler extends date_views_filter_handler_simpl
     // If data is correct.
     if (count($field_names) == 2) {
       $value = $this->get_filter_value('value', $this->value['value']);
-      $comp_date = new DateObject($value, date_default_timezone(), $this->format);
+      $comp_date = new BackdropDateTime($value, date_default_timezone(), $this->format);
 
       $start_field = $this->date_handler->sql_field($field_names[0], NULL, $comp_date);
       $start_field = $this->date_handler->sql_format($this->format, $start_field);

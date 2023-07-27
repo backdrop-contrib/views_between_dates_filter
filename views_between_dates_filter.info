@@ -1,9 +1,5 @@
 name = Views between dates filter
 description = A filter similar to separate filters for start and end date, but exposed in a single field.
-core = 7.x
+backdrop = 1.x
+type = module
 package = Date/Time
-dependencies[] = date
-dependencies[] = date_views
-php = 5.2
-files[] = includes/views_between_dates_filter_handler.inc
-

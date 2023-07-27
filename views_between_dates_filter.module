@@ -1,8 +1,20 @@
 <?php
 
+/**
+ * Implements hook_autoload_info().
+ */
+function views_between_dates_filter_autoload_info() {
+  return array(
+    'views_between_dates_filter_handler' => 'includes/views_between_dates_filter_handler.inc',
+  );
+}
+
+/**
+ * Implements hook_views_api().
+ */
 function views_between_dates_filter_views_api() {
   return array(
     'api' => 3,
-    'path' => drupal_get_path('module', 'views_between_dates_filter') . '/includes',
+    'path' => backdrop_get_path('module', 'views_between_dates_filter') . '/includes',
   );
 }
